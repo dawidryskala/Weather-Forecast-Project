@@ -9,18 +9,14 @@
 
 
 
-** If you chose place with diffrent timezone you will see your time and local time in chosen location.**
+**If you chose place with diffrent timezone you will see your time and local time in chosen location.**
 
 
 
 ![2](https://github.com/dawidryskala/Weather-Forecast-Project/assets/141305850/491dd343-40bf-4154-a012-a7e5906eb830)
 
 
-
-
-This is how the page structure looks like on smaller devices.
-
-
+**This is how the page structure looks like on smaller devices.**
 
 ![5](https://github.com/dawidryskala/Weather-Forecast-Project/assets/141305850/e047a03c-5643-4962-be32-e9f40aa8b939)
 
@@ -28,11 +24,16 @@ This is how the page structure looks like on smaller devices.
 
 
 
-If you enter a place which is not in database you will see this error message. 
-
-
+**If you enter a place which is not in database you will see this error message.**
 
 ![4](https://github.com/dawidryskala/Weather-Forecast-Project/assets/141305850/99d7e59b-0d55-461a-a8ca-ee0f6966bd29)
+
+**There are plenty of comments in Index.js to help you understand the code :relieved:**
+
+![7](https://github.com/dawidryskala/Weather-Forecast-Project/assets/141305850/d2ea0174-523a-4f51-95f0-33a7ddefdee1)
+
+![8](https://github.com/dawidryskala/Weather-Forecast-Project/assets/141305850/7de6897c-d84c-4620-910c-cf143ce70b20)
+
 
 
 
