@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+</head>
+
+<body>
+    <container class="main_container">
+        <container2 class="all_content">
+            <form action="/" id="form" class="form" method="POST">
+                <label for="name" class="label_place">Enter place: </label>
+                <input type="text" class="input_text" name="place" id="name" required />
+                <input type="submit" class="input_submit" value="submit" />
+            </form>
+
+            <%if (locals.this_moment_weather_data){%>
+                <div class="country_name_flex">
+                    <div class="country_name_grid">
+                        <p class="country_name_paragraph country_name_paragraph_1">
+                            <%=place_data.place %>
+                        </p>
+                        <p class="country_name_paragraph country_name_paragraph_2">country
+                            <%=place_data.country_shortcut%>
+                        </p>
+                        <p class="country_name_paragraph country_name_paragraph_3">
+                            latitude:
+                            <%=place_data.latitude%>
+                        </p>
+                        <p class="country_name_paragraph country_name_paragraph_4">
+                            longitude: <%=place_data.longitude%>
+                        </p>
+                    </div>
+                </div>
+                <%}%>
+
+                    <%if (locals.this_moment_weather_data){%>
+                        <div class="main_div">
+                            <div>
+                                <p class="p_left_data">
+                                    actuall temp: <%=this_moment_weather_data.actuall_temp%><br>
+                                        pressure: <%=this_moment_weather_data.pressure%><br>
+                                            cloudiness: <%=this_moment_weather_data.cloudiness%><br>
+                                                <%if(locals.this_moment_weather_data.rain){%>
+                                                    rain: <%=Math.floor(this_moment_weather_data.rain['1h'] ) %>
+                                                        (1 mm of precipitation corresponds to 1 liter of water per 1 m²)
+                                                        <br>
+                                                        <%} else%>
+                                </p>
+
+                                <p class="p_middle-data">
+                                    <%if (this_moment_weather_data.actuall_date
+                                        !==this_moment_weather_data.actuall_location_date){%>
+                                        Your time<br>
+                                        <%=this_moment_weather_data.actuall_date%> <br><br>
+                                            Local time <br>
+                                            <%=this_moment_weather_data.actuall_location_date%><br>
+                                                <%}else { %>
+                                                    <%=this_moment_weather_data.actuall_date%> <br><br>
+                                                        <%}%>
+                                                            <img class="icon"
+                                                                src="https://openweathermap.org/img/wn/<%=this_moment_weather_data.icon%>@2x.png">
+                                </p>
+
+                                <p class="p_meteorological_data">
+                                    min temp: <%=this_moment_weather_data.temp_min%><br>
+                                        max temp: <%=this_moment_weather_data.temp_max%><br>
+                                            wind speed: <%=this_moment_weather_data.wind_speed%><br>
+                                                wind direction: <%=this_moment_weather_data.wind_direction%><br>
+                                </p>
+                            </div>
+                        </div>
+                        <%}%>
+
+                            <%if(locals.forecast_data){%>
+                                <%forecast_data.forEach(element=> {%>
+                                    <div class="main_div">
+                                        <div>
+                                            <p class="p_left_data">
+                                                temp: <%=element.actuall_temp%><br>
+                                                    pressure: <%=element.pressure%><br>
+                                                        cloudiness: <%=element.cloudiness%><br>
+                                                            rain propability: <%=Math.floor(element.pop *100)%>
+                                                                %<br>
+                                            </p>
+
+                                            <p class="p_middle-data">
+                                                <%if (element.actuall_date !==element.actuall_location_date){%>
+                                                    Your time<br>
+                                                    <%=element.actuall_date%> <br><br>
+                                                        Local time <br>
+                                                        <%=element.actuall_location_date%><br>
+                                                            <%}else { %>
+                                                                <%=element.actuall_date%> <br><br>
+                                                                    <%}%>
+                                                                        <img class="icon"
+                                                                            src="https://openweathermap.org/img/wn/<%=element.icon%>@2x.png">
+                                            </p>
+                                            <p class="p_meteorological_data">
+
+                                                min temp: <%=element.temp_min%><br>
+                                                    max temp: <%=element.temp_max%><br>
+                                                        wind speed: <%=element.wind_speed%><br>
+                                                            wind direction: <%=element.wind_direction%><br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <%})%>
+                                        <%}else if (locals.error){%>
+                                            <div class="div_error">
+                                                Sorry, there is no such place in our database ☹️
+                                            </div>
+                                            <%}%>
+        </container2>
+    </container>
+</body>
+
+</html>

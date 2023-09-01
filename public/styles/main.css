@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #B9F3FC;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.main_container {
+    display: flex;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.all_content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 1rem;
+    height: 100px;
+    text-align: center;
+}
+
+.input_text {
+    margin: 1rem;
+    border-radius: 2rem;
+    background-color: #AEE2FF;
+    border-color: #AEE2FF;
+}
+
+.input_submit {
+    margin: 1rem;
+    border-radius: 2rem;
+    background-color: #EFE7BC;
+    border-color: #EFE7BC;
+    color: black;
+    font-weight: bold;
+}
+
+div {
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-rows: 1fr auto;
+    background-color: #93C6E7;
+    border-radius: 2rem;
+}
+
+.country_name_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFE7BC;
+    font-size: 1.5rem;
+}
+
+.country_name_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #EFE7BC;
+    font-size: 1.5rem;
+
+}
+
+.main_div {
+    display: flex;
+    justify-content: center;
+}
+
+.p_middle-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p_meteorological_data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 1rem;
+    line-height: 1.5rem;
+}
+
+.p_left_data {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 1rem;
+    line-height: 1.5rem;
+    max-width: 220px;
+}
+
+.country_name_paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country_name_paragraph_1 {
+    grid-area: 1/1/1/2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.country_name_paragraph_2 {
+    grid-area: 2/1/2/2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.country_name_paragraph_3 {
+    grid-area: 1/2/1/3;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.country_name_paragraph_4 {
+    grid-area: 2/2/2/3;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.div_error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #93C6E7;
+    border-radius: 2rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FEDEFF;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        font-size: 2rem;
+    }
+
+    .label_place {
+        margin: 1rem;
+    }
+
+    .input_text {
+        /* margin-right: 1rem;
+        margin-left: 1rem; */
+        padding: 0.5rem;
+    }
+
+    .input_submit {
+        /* margin-right: 1rem;
+        margin-left: 1rem; */
+        padding: 0.5rem;
+    }
+
+    div {
+        grid-template-columns: 1fr;
+    }
+
+    .p_middle-data {
+        font-size: 1rem;
+    }
+
+    .p_meteorological_data {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .p_left_data {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 701px) {
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background-color: #FEDEFF;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        font-size: 2rem;
+    }
+
+    .label_place {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .input_text {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        padding: 0.5rem;
+    }
+
+    .input_submit {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        padding: 0.5rem;
+    }
+
+    .p_meteorological_data {
+        padding-right: 2rem;
+    }
+
+    .p_middle-data {
+        font-size: 1rem;
+    }
+
+    .p_left_data {
+        justify-content: center;
+        padding-left: 2rem;
+    }
+}
