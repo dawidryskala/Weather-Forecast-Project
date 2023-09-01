@@ -37,7 +37,7 @@
 
 **That project uses OpenWeather API. You can use my free API KEY or you can generate your own on their website: https://openweathermap.org/price**
 
-![9](https://github.com/dawidryskala/Weather-Forecast-Project/assets/141305850/5f64b04d-db3e-4f0a-b6c5-c371dc2d7d34)
+![11](https://github.com/dawidryskala/Weather-Forecast-Project/assets/141305850/343d45b1-6fd0-4de2-a5e7-1eea5d925c8e)
 
 **Click `Get API key` on Free column to get free API KEY.
 Put it into index.js into variable API_KEY.**
